@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700;800&family=League+Spartan:wght@700&family=Lexend+Deca&family=Manrope:wght@800&display=swap');
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark-Blue);
+    font-family: 'Manrope', sans-serif;
+}
+.card{
+    max-width: 32rem;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: var(--Dark-Grayish-Blue);
+     text-align: center;
+     position: relative;
+     
+}
+.card h1{
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+   
+    text-transform: uppercase;
+    color: var(--Neon-Green);
+}
+.card p{
+    font-size: 1.75rem;
+    color: var(--Light-Cyan);
+}
+.card-img{
+    background: url('./images/pattern-divider-desktop.svg') no-repeat center;
+    width: 100%;
+    height: 2rem;
+}
+
+.card button[aria-label="generate"]{
+    background: url('./images/icon-dice.svg') no-repeat center;
+    background-color: var(--Neon-Green);
+    width: 4rem;
+    height: 4rem; 
+    border-radius: 50%;
+    border: none;
+    padding: 0.7rem;
+   position: absolute;
+   top:90%;
+   right: 44%;
+    cursor: pointer;
+}
+.attribution{
+    color: aliceblue;
+}
+.attribution a{
+    color: var(--Neon-Green) ;
+}
+.card button[aria-label="generate"]:hover{
+  filter: drop-shadow(10px 1px 20px var(--Neon-Green)) invert(5%);
+}
+@media (min-width:390px){
+    .card{
+        width: 90%;
+    }
+    .card-img{
+        background: url('./images/pattern-divider-mobile.svg') no-repeat center;
+    }
+    .card button[aria-label="generate"]{
+        transform: translateX(15%);
+    }
+}
